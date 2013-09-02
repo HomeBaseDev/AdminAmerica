@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Invoices";
+}
+
+<h2>Invoices</h2>
+<h3>VSP</h3>
+
+<div id="InvoiceSearch">
+    @Ajax.ActionLink("Search and edit one invoice",
+                "InvoiceSearch",
+                new AjaxOptions{
+                    UpdateTargetId="InvoiceSearch",
+                    InsertionMode=InsertionMode.Replace,
+                    HttpMethod="GET"
+                })
+
+</div>
+
+<h3>Hartford</h3>

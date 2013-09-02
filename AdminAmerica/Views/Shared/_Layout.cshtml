@@ -3,19 +3,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Admin America</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
     <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -40,12 +41,21 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Admin America</a>
+         
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
-              <li>@Html.ActionLink("About", "About", "Home")</li>
-              <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Infinity Trust
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("IT Home", "Index", "InfinityTrust")</li>
+                    <li>@Html.ActionLink("Invoices", "Invoices", "InfinityTrust")</li>
+                </ul>
+              
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -74,6 +84,8 @@
     <script src="../js/bootstrap-collapse.js"></script>
     <script src="../js/bootstrap-carousel.js"></script>
     <script src="../js/bootstrap-typeahead.js"></script>
+    <script src="../scripts/jquery-1.7.1.min.js"></script>
+    <script src="../scripts/jquery.unobtrusive-ajax.min.js"></script>
 
   </body>
 </html>

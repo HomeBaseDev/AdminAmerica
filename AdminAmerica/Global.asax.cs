@@ -23,6 +23,24 @@ namespace AdminAmerica
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            // add Sub Directory View Engine
+            ViewEngines.Engines.Add(new SubDirViewEngine()); 
         }
+    }
+
+    public class SubDirViewEngine : RazorViewEngine
+    {
+        // add sub directory to "shared" to organize Infinity Trust partial views
+        private static string[] NewITViewFormats = new[] { 
+        "~/Views/{1}/InfinityTrust/{0}.cshtml",
+        "~/Views/Shared/InfinityTrust/{0}.cshtml"
+    };
+
+        public SubDirViewEngine()
+        {
+            base.PartialViewLocationFormats = base.PartialViewLocationFormats.Union(NewITViewFormats).ToArray();
+        }
+
     }
 }

@@ -1,0 +1,39 @@
+﻿
+@using (Ajax.BeginForm("InvoiceSearchResults","InfinityTrust",
+    new AjaxOptions { 
+            InsertionMode=InsertionMode.Replace,
+            HttpMethod="GET",
+            OnFailure="SearchFailed",
+            UpdateTargetId = "InvoiceSearch",
+        }))
+        {
+        <fieldset>
+        <legend>Client Search</legend>
+        <label>Business Name</label>
+        <input type="text" name="bizName" placeholder="Type something…">
+    
+        <label>Billing Period (month/year)</label>
+        <select class="span1" name="month">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        /
+        <select class="span1" name="year">
+            <option>2011</option>
+            <option>2012</option>
+            <option>2013</option>
+        </select>
+        <label></label>
+        <button type="submit" class="btn">Search</button>
+        </fieldset>
+        }

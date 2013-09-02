@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NBK455_homebasewebModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="NBK455_homebasewebModelStoreContainer">
+          <EntitySet Name="client" EntityType="NBK455_homebasewebModel.Store.client" store:Type="Tables" Schema="IT_VSP" />
+        </EntityContainer>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="parent_id" Type="int" Nullable="false" />
+          <Property Name="ContactFirstName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ContactLastName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="BusinessName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="agent_id" Type="int" Nullable="false" />
+          <Property Name="businessType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SICcode" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="status" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="effectiveDate" Type="datetime" Nullable="false" />
+          <Property Name="termDate" Type="datetime" Nullable="false" />
+          <Property Name="billingType_id" Type="int" Nullable="false" />
+          <Property Name="invoiceName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="address" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="address2" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="city" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="state" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="zip" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="phone" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="phone2" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="fax" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="comments" Type="text" Nullable="false" />
+          <Property Name="webURL" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="customField1" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="customField2" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="customField3" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="customFieldNumeric" Type="int" Nullable="false" />
+          <Property Name="eft" Type="bit" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NBK455_homebasewebModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="NBK455_homebasewebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="vspclients" EntityType="NBK455_homebasewebModel.vspclient" />
+        </EntityContainer>
+        <EntityType Name="vspclient">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="parent_id" Nullable="false" />
+          <Property Type="String" Name="ContactFirstName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactLastName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BusinessName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="agent_id" Nullable="false" />
+          <Property Type="String" Name="businessType" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SICcode" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="status" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="effectiveDate" Nullable="false" />
+          <Property Type="DateTime" Name="termDate" Nullable="false" />
+          <Property Type="Int32" Name="billingType_id" Nullable="false" />
+          <Property Type="String" Name="invoiceName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="address" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="address2" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="city" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="state" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="zip" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="phone" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="email" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="phone2" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="fax" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="comments" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="webURL" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="customField1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="customField2" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="customField3" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="customFieldNumeric" Nullable="false" />
+          <Property Type="Boolean" Name="eft" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NBK455_homebasewebModelStoreContainer" CdmEntityContainer="NBK455_homebasewebEntities">
+          <EntitySetMapping Name="vspclients">
+            <EntityTypeMapping TypeName="NBK455_homebasewebModel.vspclient">
+              <MappingFragment StoreEntitySet="client">
+                <ScalarProperty Name="eft" ColumnName="eft" />
+                <ScalarProperty Name="customFieldNumeric" ColumnName="customFieldNumeric" />
+                <ScalarProperty Name="customField3" ColumnName="customField3" />
+                <ScalarProperty Name="customField2" ColumnName="customField2" />
+                <ScalarProperty Name="customField1" ColumnName="customField1" />
+                <ScalarProperty Name="webURL" ColumnName="webURL" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="phone2" ColumnName="phone2" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="address2" ColumnName="address2" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="invoiceName" ColumnName="invoiceName" />
+                <ScalarProperty Name="billingType_id" ColumnName="billingType_id" />
+                <ScalarProperty Name="termDate" ColumnName="termDate" />
+                <ScalarProperty Name="effectiveDate" ColumnName="effectiveDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="SICcode" ColumnName="SICcode" />
+                <ScalarProperty Name="businessType" ColumnName="businessType" />
+                <ScalarProperty Name="agent_id" ColumnName="agent_id" />
+                <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+                <ScalarProperty Name="ContactLastName" ColumnName="ContactLastName" />
+                <ScalarProperty Name="ContactFirstName" ColumnName="ContactFirstName" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AdminAmerica">
+        <EntityTypeShape EntityType="NBK455_homebasewebModel.vspclient" Width="1.5" PointX="0.75" PointY="0.75" Height="0.4" IsExpanded="false" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,21 @@
+﻿@model List<AdminAmerica.Models.vspclient>
+
+<ul class="unstyled">
+@foreach (AdminAmerica.Models.vspclient c in @Model)
+{
+    <li>
+    @c.id
+    
+    @Ajax.ActionLink(c.BusinessName,"InvoiceEdit","InfinityTrust",
+        new {
+                id = c.id
+            },
+        new AjaxOptions{
+            UpdateTargetId="InvoiceSearch",
+            InsertionMode=InsertionMode.Replace,
+            HttpMethod="GET"
+        }) 
+    </li>   
+}
+</ul>
+       
